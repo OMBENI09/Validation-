@@ -1,0 +1,39 @@
+/* static/styles.css */
+
+body {
+    background-color: #f0f8ff; /* Set the background color to a light blue shade */
+    font-family: Arial, sans-serif;
+}
+
+form {
+    width: 50%; /* Set the form width to 50% of the container */
+    margin: auto; /* Center the form horizontally */
+    background-color: #f0fff0; /* Set the form background color to a light green shade */
+    padding: 20px; /* Add some padding to the form */
+    border-radius: 10px; /* Add rounded corners to the form */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+label {
+    display: block; /* Display labels as block elements */
+    margin-bottom: 5px; /* Add a small margin below each label */
+}
+
+input, select {
+    width: 100%; /* Make input fields and selects fill the entire width of the container */
+    padding: 8px; /* Add some padding to input fields and selects */
+    margin-bottom: 10px; /* Add a margin below each input field and select */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+input[type="submit"] {
+    background-color: #008000; /* Set the submit button background color to green */
+    color: #fff; /* Set the text color to white */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+hr {
+    border: none; /* Remove default border of horizontal line */
+    border-top: 1px solid #008000; /* Set the color of the horizontal line to green */
+    margin: 20px 0; /* Add margin above and below the horizontal line */
+}

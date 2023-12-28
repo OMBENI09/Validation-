@@ -1,0 +1,61 @@
+<!-- validation_project/validation_app/templates/validation_app/multiple_participants.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+    {% block title %}Multiple Participants Form{% endblock %}
+    <h2>Multiple Participants Form</h2>
+    <form method="post">
+        {% csrf_token %}
+
+        <div style="display: flex;">
+
+            <div style="width: 50%; padding-right: 20px; background-color: #3498db;"> <!-- Blue color for the left side -->
+                <h3>Participant Information</h3>
+
+                <div class="form-row">
+                    <label for="{{ participant_form.date_of_birth.id_for_label }}">Date of Birth:</label>
+                    {{ participant_form.date_of_birth }}
+                </div>
+
+                <div class="form-row">
+                    <label for="{{ participant_form.first_name.id_for_label }}">First Name:</label>
+                    {{ participant_form.first_name }}
+                </div>
+
+                <div class="form-row">
+                    <label for="{{ participant_form.last_name.id_for_label }}">Last Name:</label>
+                    {{ participant_form.last_name }}
+                </div>
+
+                <!-- Add other fields of ParticipantForm as needed -->
+
+            </div>
+
+            <div style="width: 50%;">
+                <h3>Vehicle Information</h3>
+
+                <div class="form-row">
+                    <label for="{{ vehicle_form.car_plate_number.id_for_label }}">Car Plate Number:</label>
+                    {{ vehicle_form.car_plate_number }}
+                </div>
+
+                <div class="form-row">
+                    <label for="{{ vehicle_form.model.id_for_label }}">Model:</label>
+                    {{ vehicle_form.model }}
+                </div>
+
+                <div class="form-row">
+                    <label for="{{ vehicle_form.make.id_for_label }}">Make:</label>
+                    {{ vehicle_form.make }}
+                </div>
+
+                <!-- Add other fields of VehicleForm as needed -->
+
+            </div>
+        </div>
+
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}

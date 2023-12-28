@@ -1,0 +1,13 @@
+<!-- vehicle_form.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  {% block title %}Vehicle Form{% endblock %}
+  <h2>Vehicle Form</h2>
+  <form method="post" action="{% url 'vehicle_form' %}">
+    {% csrf_token %}
+    {{ participant_form.as_p }}
+    {{ vehicle_form.as_p }}
+    <button type="submit">Submit</button>
+  </form>
+{% endblock %}

@@ -1,0 +1,71 @@
+<!-- validation_project/validation_app/templates/validation_app/participant_form.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    {% block title %}Participant Form{% endblock %}
+    <h2>Participant Form</h2>
+    <form method="post" action="{% url 'participant_form' %}">
+        {% csrf_token %}
+        <div style="display: flex;">
+            <div style="width: 50%; padding-right: 20px; background-color: #3498db;">
+                <!-- Blue color for the left side -->
+                {{ participant_form.as_p }}
+            </div>
+            <div style="width: 50%; background-color: #2ecc71;">
+                <!-- Green color for the right side -->
+                <h2>Vehicle Form</h2>
+                <div style="margin-bottom: 10px;">
+                    <label for="{{ vehicle_form.car_plate_number.id_for_label }}">Car Plate Number:</label>
+                    {{ vehicle_form.car_plate_number }}
+                </div>
+
+                <div style="margin-bottom: 10px;">
+                    <label for="{{ vehicle_form.model.id_for_label }}">Model:</label>
+                    {{ vehicle_form.model }}
+                </div>
+
+                <div style="margin-bottom: 10px;">
+                    <label for="{{ vehicle_form.make.id_for_label }}">Make:</label>
+                    {{ vehicle_form.make }}
+                </div>
+
+                <div style="margin-bottom: 10px;">
+                    <label for="{{ vehicle_form.speed.id_for_label }}">Speed:</label>
+                    {{ vehicle_form.speed }}
+                </div>
+
+                <div style="margin-bottom: 10px;">
+                    <label for="{{ vehicle_form.weight.id_for_label }}">Weight:</label>
+                    {{ vehicle_form.weight }}
+                </div>
+
+                <div style="margin-bottom: 10px;">
+                    <label for="{{ vehicle_form.color.id_for_label }}">Color:</label>
+                    {{ vehicle_form.color }}
+                </div>
+
+                <div style="margin-bottom: 10px;">
+                    <label for="{{ vehicle_form.volume.id_for_label }}">Volume:</label>
+                    {{ vehicle_form.volume }}
+                </div>
+
+                <div style="margin-bottom: 10px;">
+                    <label for="{{ vehicle_form.area.id_for_label }}">Area:</label>
+                    {{ vehicle_form.area }}
+                </div>
+
+                <div style="margin-bottom: 10px;">
+                    <label for="{{ vehicle_form.mass.id_for_label }}">Mass:</label>
+                    {{ vehicle_form.mass }}
+                </div>
+
+                <div style="margin-bottom: 10px;">
+                    <label for="{{ vehicle_form.additional_field.id_for_label }}">Additional Field:</label>
+                    {{ vehicle_form.additional_field }}
+                </div>
+            </div>
+        </div>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}
